@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PlaylistParserTask" extends="Task">
+  <interface>
+    <field id="url" type="uri" />
+    <field id="content" type="node" alwaysNotify="true" />
+    <field id="errorMessage" type="string" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/PlaylistParserTask.brs" />
+</component>

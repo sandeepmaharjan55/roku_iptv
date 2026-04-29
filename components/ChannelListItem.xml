@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ChannelListItem" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="showContent" />
+  </interface>
+  <children>
+    <Rectangle id="bg" width="760" height="92" color="0x182330FF" />
+    <Rectangle id="accent" width="8" height="92" color="0x182330FF" />
+    <Poster id="thumb" translation="[24, 18]" width="100" height="56" loadDisplayMode="scaleToFit" uri="" />
+    <Label id="title" translation="[144, 16]" width="420" height="30" font="font:MediumBoldSystemFont" color="0xFFFFFFFF" />
+    <Label id="subtitle" translation="[144, 50]" width="420" height="24" font="font:SmallSystemFont" color="0xAFC3D6FF" />
+    <Rectangle id="favBadgeBg" translation="[570, 22]" width="78" height="28" color="0x3B2F1FFF" visible="false" />
+    <Label id="favBadge" translation="[582, 27]" width="54" height="18" horizAlign="center" text="Saved" font="font:SmallSystemFont" color="0xF7D9A7FF" visible="false" />
+    <Label id="cta" translation="[640, 32]" width="90" height="24" horizAlign="right" text="Play" font="font:SmallSystemFont" color="0x6D8194FF" />
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/ChannelListItem.brs" />
+</component>

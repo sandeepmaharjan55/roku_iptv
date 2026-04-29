@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+  <children>
+    <Rectangle id="bg" width="1920" height="1080" color="0x0C1117FF" />
+    <Rectangle translation="[0,0]" width="1920" height="120" color="0x121A24FF" />
+    <Rectangle translation="[0,120]" width="1920" height="960" color="0x0C1117FF" />
+
+    <Label id="titleLabel"
+      translation="[70, 28]"
+      width="1700"
+      height="54"
+      text="IPTV Browser by Sandeep Maharjan"
+      font="font:LargeBoldSystemFont"
+      color="0xFFFFFFFF" />
+
+    <Label id="subtitleLabel"
+      translation="[70, 76]"
+      width="1400"
+      height="30"
+      text="Loading IPTV playlist..."
+      font="font:MediumSystemFont"
+      color="0xAFC3D6FF" />
+
+    <Rectangle translation="[60, 150]" width="820" height="850" color="0x121A24FF" />
+    <Label translation="[90, 176]" width="300" height="32" text="Channels" font="font:MediumBoldSystemFont" color="0xE9F0F7FF" />
+
+    <Rectangle id="searchBg" translation="[90, 216]" width="760" height="50" color="0x172231FF" />
+    <Label id="searchLabel" translation="[110, 229]" width="720" height="24" text="Search: All channels" font="font:MediumSystemFont" color="0xC8D4E0FF" />
+
+    <MarkupList
+      id="channelList"
+      translation="[90, 290]"
+      itemSize="[760, 92]"
+      itemSpacing="[0, 16]"
+      numRows="6"
+      numColumns="1"
+      drawFocusFeedback="true"
+      vertFocusAnimationStyle="floatingFocus" />
+
+    <Rectangle translation="[920, 150]" width="940" height="850" color="0x121A24FF" />
+
+    <Poster
+      id="logoPoster"
+      translation="[970, 195]"
+      width="320"
+      height="180"
+      loadDisplayMode="scaleToFit"
+      uri="" />
+
+    <Rectangle translation="[1315, 195]" width="490" height="180" color="0x172231FF" />
+    <Label id="heroLabel"
+      translation="[1345, 220]"
+      width="430"
+      height="40"
+      text="Select a channel"
+      font="font:MediumBoldSystemFont"
+      color="0xFFFFFFFF" />
+    <Label id="heroSubLabel"
+      translation="[1345, 268]"
+      width="430"
+      height="70"
+      numLines="3"
+      wrap="true"
+      text="Browse channels on the left. Press OK to play the selected stream."
+      font="font:MediumSystemFont"
+      color="0xB7C8D8FF" />
+
+    <Label id="channelName"
+      translation="[970, 410]"
+      width="820"
+      height="52"
+      text="Select a channel"
+      font="font:LargeBoldSystemFont"
+      color="0xFFFFFFFF" />
+
+    <Rectangle id="groupChip" translation="[970, 476]" width="250" height="42" color="0x213247FF" />
+    <Label id="groupChipText"
+      translation="[990, 485]"
+      width="210"
+      height="24"
+      horizAlign="center"
+      text="No group"
+      font="font:MediumBoldSystemFont"
+      color="0xD9E7F5FF" />
+
+    <Rectangle id="favoriteChip" translation="[1240, 476]" width="220" height="42" color="0x3B2F1FFF" />
+    <Label id="favoriteChipText"
+      translation="[1260, 485]"
+      width="180"
+      height="24"
+      horizAlign="center"
+      text="Not saved"
+      font="font:MediumBoldSystemFont"
+      color="0xF7D9A7FF" />
+
+    <Rectangle translation="[970, 550]" width="790" height="2" color="0x223040FF" />
+
+    <Label translation="[970, 575]" width="220" height="28" text="Channel details" font="font:MediumBoldSystemFont" color="0xE9F0F7FF" />
+    <Label id="channelMeta"
+      translation="[970, 618]"
+      width="780"
+      height="180"
+      numLines="6"
+      wrap="true"
+      text="The app fetches the playlist, parses channels, and plays the selected stream when Roku supports the format."
+      font="font:MediumSystemFont"
+      color="0xC8D4E0FF" />
+
+    <Rectangle translation="[970, 820]" width="790" height="120" color="0x172231FF" />
+    <Label id="helpText"
+      translation="[995, 842]"
+      width="740"
+      height="78"
+      numLines="4"
+      wrap="true"
+      text="OK: Play   Options: Save favorite   Play/Pause: Favorites view\nFast Forward: Search   Rewind: Clear search   Instant Replay: Roku-friendly toggle"
+      font="font:MediumSystemFont"
+      color="0xAFC3D6FF" />
+
+    <Video id="videoPlayer" width="1920" height="1080" visible="false" translation="[0,0]" />
+
+    <PlaylistParserTask id="playlistTask" />
+    <FavoritesTask id="favoritesTask" />
+  </children>
+
+  <interface>
+    <field id="playlistUrl" type="string" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+</component>
