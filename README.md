@@ -1,4 +1,6 @@
 # roku_iptv
+Refer to this post to install zip file on your roku tv.
+https://tv-smarters.com/index.php?rp=/knowledgebase/25/How-to-Set-Up-IPTV-Smarters-on-Roku-Using-a-Clever-Trick.html
 
 ### Show your support
 
